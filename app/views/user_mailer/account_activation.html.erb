@@ -1,10 +1,10 @@
 <h1>ACTIVATE THE CHILL</h1>
 
 <p>
-  	HI <%= @user.name %>,
+  	HI <%= @user.name.upcase %>,
 </p>
 <p>
 	WELCOME TO THE CHILLSPOT. CLICK BELOW TO ACTIVATE THE CHILLNESS.
 </p>
 
-<%= link_to "ACTIVATE THE CHILL", edit_account_activation_url(@user.activation_token, @user.email) %>
+<%= link_to "ACTIVATE THE CHILL", edit_account_activation_url(@user.activation_token, email: @user.email) %>
